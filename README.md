@@ -1,5 +1,5 @@
 # nCL-in-ReChorus
-### 我们在rechorus轻量级推荐算法框架上实现了nCL推荐算法，且我们在cpu和gpu上都实现了nCL推荐算法。
+## 我们在rechorus轻量级推荐算法框架上实现了nCL推荐算法，且我们在cpu和gpu上都实现了nCL推荐算法。
 
 rechorus中的nCL.py、nCLRunnner.py、nCL_g.py、CLRunner_g.py是我们新增的函数，前两个函数是在cpu上运行，后两个函数是在gpu下实现。
 
@@ -21,4 +21,6 @@ python main.py --model_name nCL
 python main.py --model_name nCL_g 
 ```
 
+## Acknowledgements
+论文链接https://dl.acm.org/doi/10.1145/3616855.3635832
 
