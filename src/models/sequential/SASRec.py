@@ -18,6 +18,7 @@ from models.BaseModel import SequentialModel
 from models.BaseImpressionModel import ImpressionSeqModel
 from utils import layers
 
+
 class SASRecBase(object):
 	@staticmethod
 	def parse_model_args(parser):
@@ -66,13 +67,14 @@ class SASRecBase(object):
 		his_vectors = his_vectors + pos_vectors
 
 		# Self-attention
-		causality_mask = np.tril(np.ones((1, 1, seq_len, seq_len), dtype=np.int))
+		causality_mask = np.tril(np.ones((1, 1, seq_len, seq_len), dtype=int))
 		attn_mask = torch.from_numpy(causality_mask).to(self.device)
 		# attn_mask = valid_his.view(batch_size, 1, 1, seq_len)
 		for block in self.transformer_block:
 			his_vectors = block(his_vectors, attn_mask)
 		his_vectors = his_vectors * valid_his[:, :, None].float()
 
+		lengths = lengths.long()
 		his_vector = his_vectors[torch.arange(batch_size), lengths - 1, :]
 		# his_vector = his_vectors.sum(1) / lengths[:, None].float()
 		# ↑ average pooling is shown to be more effective than the most recent embedding

@@ -7,13 +7,13 @@ import logging
 import numpy as np
 import pandas as pd
 
-from utils import utils
+from utils import utils 
 
 
 class BaseReader(object):
     @staticmethod
     def parse_data_args(parser):
-        parser.add_argument('--path', type=str, default='data/',
+        parser.add_argument('--path', type=str, default='data',
                             help='Input data dir.')
         parser.add_argument('--dataset', type=str, default='Grocery_and_Gourmet_Food',
                             help='Choose a dataset.')
@@ -41,10 +41,14 @@ class BaseReader(object):
                     self.residual_clicked_set[uid].add(iid)
 
     def _read_data(self):
-        logging.info('Reading data from \"{}\", dataset = \"{}\" '.format(self.prefix, self.dataset))
+        print('Reading data from "{}", dataset = "{}" '.format(self.prefix, self.dataset))
+        logging.info('Reading data from "{}", dataset = "{}" '.format(self.prefix, self.dataset))
+        
         self.data_df = dict()
         for key in ['train', 'dev', 'test']:
-            self.data_df[key] = pd.read_csv(os.path.join(self.prefix, self.dataset, key + '.csv'), sep=self.sep).reset_index(drop=True).sort_values(by = ['user_id','time'])
+            p='..\\data\\Grocery_and_Gourmet_Food\\'+key+'.csv'
+            print(p)
+            self.data_df[key] = pd.read_csv(p,sep=self.sep).reset_index(drop=True).sort_values(by = ['user_id','time'])
             self.data_df[key] = utils.eval_list_columns(self.data_df[key])
 
         logging.info('Counting dataset statistics...')

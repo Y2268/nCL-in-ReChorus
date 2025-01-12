@@ -14,7 +14,7 @@ from utils import utils
 from helpers.BaseReader import BaseReader
 
 class BaseModel(nn.Module):
-	reader, runner = None, None  # choose helpers in specific model classes
+	reader, runner = None, None  # choose helpers in specific model classes 用哪个reader读数据，用哪个runner训练
 	extra_log_args = []
 
 	@staticmethod
@@ -46,6 +46,8 @@ class BaseModel(nn.Module):
 	Key Methods
 	"""
 	def _define_params(self):
+		# 定义模型参数
+		# self.item_bias = torch.nn.Embedding(self.item_num, 1) 
 		pass
 
 	def forward(self, feed_dict: dict) -> dict:
@@ -53,6 +55,10 @@ class BaseModel(nn.Module):
 		:param feed_dict: batch prepared in Dataset
 		:return: out_dict, including prediction with shape [batch_size, n_candidates]
 		"""
+		#对输入的item_id取对应的bias做prediction
+		# i_ids=feed_dict['item_id']
+		# prediction = self.item_bias(i_ids)
+		# return prediction.view(feed_dict['batch_size'],-1)  
 		pass
 
 	def loss(self, out_dict: dict) -> torch.Tensor:
@@ -99,27 +105,45 @@ class BaseModel(nn.Module):
 		def __init__(self, model, corpus, phase: str):
 			self.model = model  # model object reference
 			self.corpus = corpus  # reader object reference
-			self.phase = phase  # train / dev / test
-
+			self.phase = phase  # train / dev / test 在三个阶段的哪个阶段
 			self.buffer_dict = dict()
 			#self.data = utils.df_to_dict(corpus.data_df[phase])#this raise the VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences warning
 			self.data = corpus.data_df[phase].to_dict('list')
 			# ↑ DataFrame is not compatible with multi-thread operations
 
 		def __len__(self):
+			#获得dataset存的数据的个数
 			if type(self.data) == dict:
 				for key in self.data:
 					return len(self.data[key])
 			return len(self.data)
 
 		def __getitem__(self, index: int) -> dict:
+			#根据给定的index返回一个对应的feed_dict
 			if self.model.buffer and self.phase != 'train':
 				return self.buffer_dict[index]
 			return self._get_feed_dict(index)
 
 		# ! Key method to construct input data for a single instance
 		def _get_feed_dict(self, index: int) -> dict:
-			pass
+			# 怎么给定index返回一个feed_dict
+			# target_item = self.data['item_id'][index]
+			# neg_items = self.neg_items[index] # 是指负样本
+			# iterm_ids = np.concatenate([[target_item], neg_items])
+			# feed_dict = {'item_id': iterm_ids,'neg_items':neg_items}
+			# return feed_dict
+			# pass
+			user_id, target_item = self.data['user_id'][index], self.data['item_id'][index]
+			if self.phase != 'train' and self.model.test_all:
+				neg_items = np.arange(1, self.corpus.n_items)
+			else:
+				neg_items = self.data.get('neg_items', np.array([]))[index]
+			item_ids = np.concatenate([[target_item], neg_items]).astype(int)
+			feed_dict = {
+                'user_id': user_id,
+                'item_id': item_ids
+            }
+			return feed_dict
 
 		# Called after initialization
 		def prepare(self):
@@ -129,28 +153,64 @@ class BaseModel(nn.Module):
 
 		# Called before each training epoch (only for the training dataset)
 		def actions_before_epoch(self):
-			pass
+			# 采样负例
+			self.neg_items = np.random.randint(1, self.corpus.n_items, size=(len(self), self.model.num_neg))
+			for i, u in enumerate(self.data['user_id']):
+				user_clicked_set = self.corpus.train_clicked_set[u]
+				for j in range(self.model.num_neg):
+					while self.neg_items[i][j] in user_clicked_set:
+						self.neg_items[i][j] = np.random.randint(1, self.corpus.n_items)
+			# pass
 
-		# Collate a batch according to the list of feed dicts
+		# # Collate a batch according to the list of feed dicts
+		# def collate_batch(self, feed_dicts: List[dict]) -> dict:
+		# 	feed_dict = dict()
+		# 	for key in feed_dicts[0]:
+		# 		if isinstance(feed_dicts[0][key], np.ndarray):
+		# 			tmp_list = [len(d[key]) for d in feed_dicts]
+		# 			if any([tmp_list[0] != l for l in tmp_list]):
+		# 				stack_val = np.array([d[key] for d in feed_dicts], dtype=np.object)
+		# 			else:
+		# 				stack_val = np.array([d[key] for d in feed_dicts])
+		# 		else:
+		# 			stack_val = np.array([d[key] for d in feed_dicts])
+		# 		if stack_val.dtype == np.object:  # inconsistent length (e.g., history)
+		# 			feed_dict[key] = pad_sequence([torch.from_numpy(x) for x in stack_val], batch_first=True)
+		# 		else:
+		# 			feed_dict[key] = torch.from_numpy(stack_val)
+		# 	feed_dict['batch_size'] = len(feed_dicts)
+		# 	feed_dict['phase'] = self.phase
+		# 	return feed_dict
 		def collate_batch(self, feed_dicts: List[dict]) -> dict:
 			feed_dict = dict()
 			for key in feed_dicts[0]:
-				if isinstance(feed_dicts[0][key], np.ndarray):
+				values = [d[key] for d in feed_dicts]
+				if isinstance(values[0], torch.Tensor) and values[0].is_sparse:  # 检查是否为稀疏张量
+					# 将稀疏张量转换为 COO 格式
+					indices = [t.indices() for t in values]
+					values = [t.values() for t in values]
+					shape = [t.shape for t in values]
+					# 合并索引和值
+					indices = torch.cat([torch.cat(i, 0) for i in zip(*indices)], 0)
+					values = torch.cat(values, 0)
+					# 创建一个新的稀疏张量
+					feed_dict[key] = torch.sparse.FloatTensor(indices, values, torch.Size(torch.max(shape, dim=0)[0]))
+				elif isinstance(feed_dicts[0][key], np.ndarray):
 					tmp_list = [len(d[key]) for d in feed_dicts]
 					if any([tmp_list[0] != l for l in tmp_list]):
 						stack_val = np.array([d[key] for d in feed_dicts], dtype=np.object)
 					else:
 						stack_val = np.array([d[key] for d in feed_dicts])
+					if stack_val.dtype == np.object:  # inconsistent length (e.g., history)
+						feed_dict[key] = pad_sequence([torch.from_numpy(x) for x in stack_val], batch_first=True)
+					else:
+						feed_dict[key] = torch.from_numpy(stack_val)
 				else:
 					stack_val = np.array([d[key] for d in feed_dicts])
-				if stack_val.dtype == np.object:  # inconsistent length (e.g., history)
-					feed_dict[key] = pad_sequence([torch.from_numpy(x) for x in stack_val], batch_first=True)
-				else:
 					feed_dict[key] = torch.from_numpy(stack_val)
 			feed_dict['batch_size'] = len(feed_dicts)
 			feed_dict['phase'] = self.phase
 			return feed_dict
-
 class GeneralModel(BaseModel):
 	reader, runner = 'BaseReader', 'BaseRunner'
 
@@ -191,7 +251,7 @@ class GeneralModel(BaseModel):
 	class Dataset(BaseModel.Dataset):
 		def _get_feed_dict(self, index):
 			user_id, target_item = self.data['user_id'][index], self.data['item_id'][index]
-			if self.phase != 'train' and self.model.test_all:
+			if self.phase == 'train' :#and self.model.test_all:
 				neg_items = np.arange(1, self.corpus.n_items)
 			else:
 				neg_items = self.data['neg_items'][index]

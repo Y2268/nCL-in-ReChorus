@@ -33,6 +33,11 @@ def batch_to_gpu(batch: dict, device) -> dict:
 			batch[c] = batch[c].to(device)
 	return batch
 
+def batch_to_cpu(batch):
+    for k, v in batch.items():
+        if isinstance(v, torch.Tensor):
+            batch[k] = v.cpu()
+    return batch
 
 def check(check_list: List[tuple]) -> NoReturn:
 	# observe selected tensors during training.

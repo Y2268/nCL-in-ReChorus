@@ -42,8 +42,8 @@ class BaseRunner(object):
 							help='pin_memory in DataLoader')
 		parser.add_argument('--topk', type=str, default='5,10,20,50',
 							help='The number of items recommended to each user.')
-		parser.add_argument('--metric', type=str, default='NDCG,HR',
-							help='metrics: NDCG, HR')
+		parser.add_argument('--metric', type=str, default='NDCG,HR,RECALL',
+							help='metrics: NDCG, HR, Recall')
 		parser.add_argument('--main_metric', type=str, default='',
 							help='Main metric to determine the best model.')
 		return parser
@@ -67,12 +67,16 @@ class BaseRunner(object):
 		# 	gt_rank = (predictions_rnd > predictions[:,0].reshape(-1,1)).sum(axis=-1)+1
 		for k in topk:
 			hit = (gt_rank <= k)
+			relevant_count = np.sum(hit)  # 计算前k项中相关项的数量
+			total_relevant = np.sum(gt_rank < np.inf)  # 计算总的相关项数量，这里假设np.inf代表不相关的项
 			for metric in metrics:
 				key = '{}@{}'.format(metric, k)
 				if metric == 'HR':
 					evaluations[key] = hit.mean()
 				elif metric == 'NDCG':
 					evaluations[key] = (hit / np.log2(gt_rank + 1)).mean()
+				elif metric == 'RECALL':
+					evaluations[key] = relevant_count / total_relevant  # 计算Recall@k
 				else:
 					raise ValueError('Undefined evaluation metric: {}.'.format(metric))
 		return evaluations
@@ -231,13 +235,14 @@ class BaseRunner(object):
 		"""
 		dataset.model.eval()
 		predictions = list()
+		print(type(dataset.data))
 		dl = DataLoader(dataset, batch_size=self.eval_batch_size, shuffle=False, num_workers=self.num_workers,
 						collate_fn=dataset.collate_batch, pin_memory=self.pin_memory)
 		for batch in tqdm(dl, leave=False, ncols=100, mininterval=1, desc='Predict'):
 			if hasattr(dataset.model,'inference'):
-				prediction = dataset.model.inference(utils.batch_to_gpu(batch, dataset.model.device))['prediction']
+				prediction = dataset.model.inference(utils.batch_to_gpu(batch,dataset.model.device))['prediction'] ###GPU, dataset.model.device
 			else:
-				prediction = dataset.model(utils.batch_to_gpu(batch, dataset.model.device))['prediction']
+				prediction = dataset.model(utils.batch_to_gpu(batch,dataset.model.device))['prediction']  ###GPU
 			predictions.extend(prediction.cpu().data.numpy())
 		predictions = np.array(predictions)
 

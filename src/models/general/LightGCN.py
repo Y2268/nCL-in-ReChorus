@@ -106,7 +106,7 @@ class LightGCNImpression(ImpressionModel, LightGCNBase):
 
 	def forward(self, feed_dict):
 		return LightGCNBase.forward(self, feed_dict)
-
+#cpu
 class LGCNEncoder(nn.Module):
 	def __init__(self, user_count, item_count, emb_size, norm_adj, n_layers=3):
 		super(LGCNEncoder, self).__init__()
@@ -117,8 +117,9 @@ class LGCNEncoder(nn.Module):
 		self.norm_adj = norm_adj
 
 		self.embedding_dict = self._init_model()
+		device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+		self.sparse_norm_adj = self._convert_sp_mat_to_sp_tensor(self.norm_adj).to(device)
 		self.sparse_norm_adj = self._convert_sp_mat_to_sp_tensor(self.norm_adj).cuda()
-
 	def _init_model(self):
 		initializer = nn.init.xavier_uniform_
 		embedding_dict = nn.ParameterDict({
@@ -131,6 +132,7 @@ class LGCNEncoder(nn.Module):
 	def _convert_sp_mat_to_sp_tensor(X):
 		coo = X.tocoo()
 		i = torch.LongTensor([coo.row, coo.col])
+		#i = torch.LongTensor(np.array([coo.row, coo.col]))
 		v = torch.from_numpy(coo.data).float()
 		return torch.sparse.FloatTensor(i, v, coo.shape)
 
@@ -147,7 +149,10 @@ class LGCNEncoder(nn.Module):
 
 		user_all_embeddings = all_embeddings[:self.user_count, :]
 		item_all_embeddings = all_embeddings[self.user_count:, :]
-
+		if users.dtype != torch.long:
+			users = users.long()  # 转换为长整型
+		if items.dtype != torch.long:
+			items = items.long()
 		user_embeddings = user_all_embeddings[users, :]
 		item_embeddings = item_all_embeddings[items, :]
 
