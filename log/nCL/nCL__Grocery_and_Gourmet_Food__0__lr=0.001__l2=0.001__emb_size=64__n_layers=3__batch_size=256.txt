@@ -1,0 +1,1218 @@
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:03:03 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:08:41 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:15:36 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:16:50 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:20:18 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:32:55 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:35:23 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:46:46 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:49:07 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 18:54:57 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:09:18 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:14:30 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:17:48 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:20:26 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:30:28 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:32:27 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:35:50 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:38:45 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:42:07 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:45:18 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:50:13 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:53:31 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 21:57:58 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 22:02:50 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 100                 
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 22:05:21 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 10                  
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 22:22:28 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 10                  
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 22:27:49 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 10                  
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='nCL', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-08 22:32:17 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ K                  | 10                  
+ alpha              | 1.0                 
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 10                  
+ epsilon            | 0.001               
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ iopt_iterations    | 10                  
+ l2                 | 0.001               
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 3                   
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ..\data\Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:nCL(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 8714x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 14682x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0486,NDCG@5:0.0287,HR@10:0.1001,NDCG@10:0.0451,HR@20:0.1964,NDCG@20:0.0692,HR@50:0.5006,NDCG@50:0.1286)
+INFO:root:Optimizer: Adam

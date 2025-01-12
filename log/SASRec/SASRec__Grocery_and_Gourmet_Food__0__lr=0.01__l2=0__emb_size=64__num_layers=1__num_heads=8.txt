@@ -1,0 +1,79 @@
+INFO:root:Namespace(model_mode='', model_name='SASRec')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-27 09:51:14 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 200                 
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ history_max        | 20                  
+ l2                 | 0                   
+ lr                 | 0.01                
+ main_metric        |                     
+ num_heads          | 8                   
+ num_layers         | 1                   
+ num_neg            | 1                   
+ num_workers        | 0                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 0                   
+ topk               | 5,10,20,50          
+===========================================
+INFO:root:Device: cuda
+INFO:root:Load corpus from ../data/Grocery_and_Gourmet_Food/SeqReader.pkl
+INFO:root:#params: 580096
+INFO:root:SASRec(
+  (i_embeddings): Embedding(8714, 64)
+  (p_embeddings): Embedding(21, 64)
+  (transformer_block): ModuleList(
+    (0): TransformerLayer(
+      (masked_attn_head): MultiHeadAttention(
+        (q_linear): Linear(in_features=64, out_features=64, bias=True)
+        (k_linear): Linear(in_features=64, out_features=64, bias=True)
+        (v_linear): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (layer_norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0, inplace=False)
+      (linear1): Linear(in_features=64, out_features=64, bias=True)
+      (linear2): Linear(in_features=64, out_features=64, bias=True)
+      (layer_norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (dropout2): Dropout(p=0, inplace=False)
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0531,NDCG@5:0.0312,HR@10:0.1046,NDCG@10:0.0476,HR@20:0.2122,NDCG@20:0.0745,HR@50:0.5094,NDCG@50:0.1325)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.5201 [61.0 s]	dev=(HR@5:0.3997,NDCG@5:0.3003) [0.1 s] *
+INFO:root:Epoch 2     loss=0.4399 [60.7 s]	dev=(HR@5:0.4374,NDCG@5:0.3364) [0.1 s] *
+INFO:root:Epoch 3     loss=0.3972 [61.1 s]	dev=(HR@5:0.4603,NDCG@5:0.3567) [0.1 s] *
+INFO:root:Epoch 4     loss=0.3497 [61.0 s]	dev=(HR@5:0.4519,NDCG@5:0.3554) [0.1 s]
+INFO:root:Epoch 5     loss=0.2982 [60.9 s]	dev=(HR@5:0.4368,NDCG@5:0.3445) [0.1 s]
+INFO:root:Epoch 6     loss=0.2568 [60.6 s]	dev=(HR@5:0.4245,NDCG@5:0.3355) [0.1 s]
+INFO:root:Epoch 7     loss=0.2279 [60.7 s]	dev=(HR@5:0.4111,NDCG@5:0.3245) [0.1 s]
+INFO:root:Epoch 8     loss=0.2087 [60.8 s]	dev=(HR@5:0.4040,NDCG@5:0.3194) [0.1 s]
+INFO:root:Epoch 9     loss=0.1951 [61.0 s]	dev=(HR@5:0.3957,NDCG@5:0.3117) [0.1 s]
+INFO:root:Epoch 10    loss=0.1852 [61.0 s]	dev=(HR@5:0.3866,NDCG@5:0.3033) [0.1 s]
+INFO:root:Epoch 11    loss=0.1775 [61.2 s]	dev=(HR@5:0.3810,NDCG@5:0.2988) [0.1 s]
+INFO:root:Epoch 12    loss=0.1714 [60.6 s]	dev=(HR@5:0.3711,NDCG@5:0.2916) [0.1 s]
+INFO:root:Early stop at 12 based on dev result.
+INFO:root:
+Best Iter(dev)=    3	 dev=(HR@5:0.4603,NDCG@5:0.3567) [732.1 s] 
+INFO:root:Load model from ../model/SASRec/SASRec__Grocery_and_Gourmet_Food__0__lr=0.01__l2=0__emb_size=64__num_layers=1__num_heads=8.pt
+INFO:root:
+Dev  After Training: (HR@5:0.4603,NDCG@5:0.3567,HR@10:0.5526,NDCG@10:0.3866,HR@20:0.6643,NDCG@20:0.4148,HR@50:0.8444,NDCG@50:0.4504)
+INFO:root:
+Test After Training: (HR@5:0.4139,NDCG@5:0.3150,HR@10:0.5112,NDCG@10:0.3465,HR@20:0.6219,NDCG@20:0.3744,HR@50:0.8165,NDCG@50:0.4129)
+INFO:root:Saving top-100 recommendation results to: ../log/SASRec/SASRec__Grocery_and_Gourmet_Food__0__lr=0/rec-SASRec-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/SASRec/SASRec__Grocery_and_Gourmet_Food__0__lr=0/rec-SASRec-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2024-12-27 10:03:30 ---------------------------------------------
